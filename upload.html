@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Shibushibu Innovation</title>
+	<meta name="description" content="Shibushibu Innovation Projectとは、渋渋から伝達される情報を可能な限り電子化し、その情報をより正確に見やすく生徒に対して発信するプロジェクトです。各学年のホームページでは、先生から伝達されている情報や掲示板に貼り出された情報を、いつでもどこでも、見ることができる仕様となっております。">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:100,300,400,500,700,900&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/dd28f85337.js" crossorigin="anonymous"></script>
+	<link rel="icon" href="img/fabicon.ico">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<link href="css/upload.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-auth.js"></script>  
+	<script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-database.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-storage.js"></script>
+
+	<!-- TODO: Add SDKs for Firebase products that you want to use
+		https://firebase.google.com/docs/web/setup#available-libraries -->
+	<script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-analytics.js"></script>
+
+	<script>
+	// Your web app's Firebase configuration
+	var firebaseConfig = {
+		apiKey: "AIzaSyDRQf4Ar3RHEpINzSfVtUekoLn9Ng0RUs8",
+		authDomain: "shibushibu-innovation-fec82.firebaseapp.com",
+		databaseURL: "https://shibushibu-innovation-fec82.firebaseio.com",
+		projectId: "shibushibu-innovation-fec82",
+		storageBucket: "shibushibu-innovation-fec82.appspot.com",
+		messagingSenderId: "1094865112079",
+		appId: "1:1094865112079:web:919dfa3af4d8834563a77a",
+		measurementId: "G-HRMHDGFYN5"
+	};
+	// Initialize Firebase
+	firebase.initializeApp(firebaseConfig);
+	firebase.analytics();
+	</script>
+</head>
+<body>
+	<form>
+		<div class="wrapper">
+			<header>
+			<h1>データアップロード</h1>
+			<span>Account: 管理者用</span>
+			</header>
+			
+			<div class="ways">
+			<ul>
+				<li class="active">
+				EVENT
+				</li>
+				<li>
+				掲示板
+				</li>
+			</ul>
+			</div>
+			
+			<div class="sections">
+			
+			<section class="active">
+				<input type="text" class="event_name"  placeholder="イベント名" id="title"/>	
+				<label>
+					<span style="font-size: 35px;font-weight: 300;">開催日</span>
+					<input type="date" class="event_date" placeholder="年 / 月 / 日" id="title"/>
+				</label>		
+				<div class="images">
+				<div class="pic">
+					add
+				</div>
+				</div>
+				
+			</section>
+			
+			</div>
+			
+			<footer>
+			<ul>
+				<li><span id="reset">reset</span></li>
+				<li><span id="send">send</span></li>
+			</ul>
+			</footer> 
+			
+		</div>
+	</form>
+	  <div class="notification"></div>
+	
+	<script type="text/javascript" src="js/upload.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

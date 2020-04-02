@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Shibushibu Innovation</title>
+	<meta name="description" content="Shibushibu Innovation Projectとは、渋渋から伝達される情報を可能な限り電子化し、その情報をより正確に見やすく生徒に対して発信するプロジェクトです。各学年のホームページでは、先生から伝達されている情報や掲示板に貼り出された情報を、いつでもどこでも、見ることができる仕様となっております。">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:100,300,400,500,700,900&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/dd28f85337.js" crossorigin="anonymous"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+	<script type="text/javascript">
+			$(document).ready(function(){
+				$('.slider').bxSlider({
+					auto: true,
+					pause: 3000,
+				});
+			});
+	</script>
+	<link href="css/style.css" rel="stylesheet">
+
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-auth.js"></script>  
+	<script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-database.js"></script>
+
+	<!-- TODO: Add SDKs for Firebase products that you want to use
+		https://firebase.google.com/docs/web/setup#available-libraries -->
+	<script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-analytics.js"></script>
+
+	<script>
+	// Your web app's Firebase configuration
+	var firebaseConfig = {
+		apiKey: "AIzaSyDRQf4Ar3RHEpINzSfVtUekoLn9Ng0RUs8",
+		authDomain: "shibushibu-innovation-fec82.firebaseapp.com",
+		databaseURL: "https://shibushibu-innovation-fec82.firebaseio.com",
+		projectId: "shibushibu-innovation-fec82",
+		storageBucket: "shibushibu-innovation-fec82.appspot.com",
+		messagingSenderId: "1094865112079",
+		appId: "1:1094865112079:web:919dfa3af4d8834563a77a",
+		measurementId: "G-HRMHDGFYN5"
+	};
+	// Initialize Firebase
+	firebase.initializeApp(firebaseConfig);
+	firebase.analytics();
+	</script>
+
+	<!-- favicon -->
+	<link rel="icon" href="img/favicon/favicon.ico" type="image/x-icon">
+
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png" sizes="180x180">
+
+	<link rel="icon" href="img/favicon/favicon-16x16.png" sizes="16x16">
+	<link rel="icon" href="img/favicon/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" href="img/favicon/android-chrome-192x192.png" sizes="48x48">
+	<link rel="icon" href="img/favicon/android-chrome-512x512.png" sizes="512x512">
+
+
+</head>
+<body>
+	<div class="headerDiv">
+		<img src="img/headerTitle.png" class="headerTitle">
+	</div>
+	<div class="topMenuUl">
+		<li class="topMenuLi" onclick="scrollFunc('.conceptSection')">Concept</li>
+		<li class="topMenuLi" onclick="scrollFunc('.aboutUsDiv')">About us</li>
+		<li class="topMenuLi">Events</li>
+		<li class="topMenuLi" onclick="scrollFunc('.calendarDiv')">Calendar</li>
+		<li class="topMenuLi">Board</li>
+	</div>
+	
+	<div class="mainView1">
+		<!-- <img src="img/topPageBackground.jpeg" class="topImage"> -->
+		<div class="slider">
+			<img src="img/topPageBackground.jpeg" alt="">
+			<img src="img/topPageBackground.jpeg" alt="">
+			<img src="img/topPageBackground.jpeg" alt="">
+			<img src="img/topPageBackground.jpeg" alt="">
+		</div>
+	</div>
+	<div class="conceptSection">
+		<p class="sectionTitle">Concept</p>
+		<hr class="sectionHr">
+		<p class="conceptContent">「渋渋をより良く」という目標を持ち、渋渋内での情報をサイトに集約させることで、より見やすく、扱いやすくしていく。<br>更に、皆さんにはこのサイトを利用して、イベントや課外活動などいろいろな活動に積極的に参加してもらいたい。</p>
+	</div>
+	<div class="eventSection">
+		<p class="sectionTitle">Events</p>
+		<hr class="sectionHr">
+		<div class="eventTable">
+			<div class="eventCell" style="margin-right: 2vw;">
+				<img src="img/example/event1.jpg" class="eventCellImage">
+				<p class="eventCellTitle">高校生外交官プログラム</p><br>
+				<p class="eventCellDate">1 / 20</p>
+			</div>
+			<div class="eventCell">
+				<img src="img/example/event2.jpg" class="eventCellImage">
+				<p class="eventCellTitle">先端科学セミナー</p><br>
+				<p class="eventCellDate">2 / 16</p>
+			</div>
+			<div class="eventCell" style="margin-right: 2vw;">
+				<img src="img/example/event3.jpg" class="eventCellImage">
+				<p class="eventCellTitle">未来社会のDESIGN機構</p><br>
+				<p class="eventCellDate">3 / 7</p>
+			</div>
+			<div class="eventCell">
+				<img src="img/example/event4.jpg" class="eventCellImage">
+				<p class="eventCellTitle">海を超えて活躍する声優</p><br>
+				<p class="eventCellDate">1 / 23</p>
+			</div>
+			<div class="eventCell" style="margin-right: 0;">
+				<img src="img/example/event5.jpg" class="eventCellImage">
+				<p class="eventCellTitle">UEC School</p><br>
+				<p class="eventCellDate">8 / 20</p>
+			</div><br>
+			<div class="eventMOreDiv">
+				<p class="eventMOreText">MORE</p>
+			</div>
+		</div>
+	</div>
+	<div class="siteImageDiv">
+		<img class="siteImage1" src="https://image.freepik.com/free-photo/trickles-red-fume_23-2147785933.jpg">
+		<img class="siteImage2" src="https://img.freepik.com/vetores-gratis/fundo-mancha-amarela_1108-97.jpg?size=338&ext=jpg">
+		<div class="changeSiteImageDiv">
+			<p class="changeSiteImageText">→</p>
+		</div>
+		<div class="changeSiteImageDiv">
+			<p class="changeSiteImageText">←</p>
+		</div>
+	</div>
+	<div class="contentsSection">
+		<p class="sectionTitle">Board</p>
+		<hr class="sectionHr">
+		<img src="img/boardImage-en.jpeg" class="contentsSectionImage">
+		<p class="conceptSectionText"><span style="font-weight: 400;">テスト範囲など、本校の掲示板に貼ってある情報を表示しています。</span><br>※このサイトに掲載されている物は正確性を重視していますが、誤ってものを表示してしまう可能性があります。</p>
+		<div class="eventMOreDiv">
+			<p class="eventMOreText">VISIT</p>
+		</div>
+	</div>
+	<div class="selectClasseDiv">
+		<div class="selectDiv">
+			<p class="selectClassText">SELECT CLASS</p>
+			<div class="labelDiv">
+				<label>
+					<select>
+						<option selected>Selet your class</option>
+						<option>A 組/ 1 組</option>
+						<option>B 組/ 2 組</option>
+						<option>C 組/ 3 組</option>
+						<option>D 組/ 4 組</option>
+						<option>E 組/ 5 組</option>
+						<option>6 組</option>
+					</select>
+				</label>
+			  </div>
+		</div>
+	</div>
+	<div class="calendarDiv">
+		<p style="margin-left: 5.1vw;" class="sectionTitle">Calendar</p>
+		<hr style="margin-left: 5.1vw;"  class="sectionHr">
+		<img style="margin-left: 5.1vw;"  src="https://merriam-webster.com/assets/mw/images/article/art-wap-article-main/gray-background-7131-98db5e6ffc4972baa4087760291cbc3e@1x.jpg" class="contentsSectionImage">
+		<div class="timetableLeftDiv">
+			<p class="timetableTitle">《 TIMETABLE 》</p>
+			<img src="img/example/timetable.jpeg" class="timetableImg">
+		</div>
+		<div class="timetableRigthDiv">
+			<div class="timetableZoomDiv">
+				<a href="img/example/timetable.jpeg" target="_blank">
+					<p class="timetableZoomText">ENLARGE</p>
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="aboutUsDiv">
+		<p class="sectionTitle">About us</p>
+		<hr class="sectionHr">
+		<p class="conceptContent">Shibushibu Innovation Projectとは、学校から伝達される情報を可能な限り電子化し、その情報をより正確に見やすく生徒に対して発信するプロジェクトです。各学年のホームページでは、先生から伝達されている情報や掲示板に貼り出された情報を、いつでもどこでも、見ることができる仕様となっております。</p>
+	</div>
+	<div class="ContactView">
+		<p style="font-size: x-large;font-weight: 500;">E-mail</p>
+		<a href="mailto:shibushibu.innovation@gmail.com"  target="_blank" >
+			<p style="font-size: x-large;font-weight: 300;margin-top: 50px;">shibushibu.innovation@gmail.com</p>
+		</a>
+		<p style="font-size: smaller;font-weight: 300;margin-top: 20px;border-bottom: 1.5px solid #080a15;">　</p>
+		<p style="font-size: x-large;font-weight: 500;margin-top: 80px;">Address</p>
+		<p style="font-size: x-large;font-weight: 300;margin-top: 50px;">〒150-0002　東京都渋谷区渋谷 1丁目 21-18</p>
+		<p style="font-size: smaller;font-weight: 300;margin-top: 20px;border-bottom: 1.5px solid #080a15;">　</p>
+		<p style="font-size: x-large;font-weight: 500;margin-top: 80px;">フィードバック</p>
+		<a href="https://forms.gle/JYmUptU11guEB4N4A" target="_blank"><p style="font-size: x-large;font-weight: 300;margin-top: 50px;">https://forms.gle/JYmUptU11guEB4N4A</p></a>	
+		<p style="font-size: smaller;font-weight: 300;margin-top: 20px;border-bottom: 1.5px solid #080a15;">　</p>
+		<p style="font-size: x-large;font-weight: 500;margin-top: 80px;">SNS</p>
+		<a href="https://www.instagram.com/shibuya_innovation/?hl=ja" target="_blank">
+			<i class="fab fa-instagram" style="font-size: 5vw;font-weight: 500;margin-top: 50px;"></i>
+		</a><br>
+		<a href="#" target="_blank">
+			<i class="fab fa-facebook-f" style="font-size: 5vw;font-weight: 500;margin-top: 50px;"></i>
+		</a><br>
+		<a href="#" target="_blank">
+			<i class="fab fa-twitter" style="font-size: 5vw;font-weight: 500;margin-top: 50px;"></i>
+		</a><br>
+		<div style="width: 100vw; margin: 200px 0 0;text-align: right;">
+			<p class="copyRight">©︎ 2020 RAY O.</p>
+		</div>
+	</div>
+<script type="text/javascript" src="js/sha256.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/database.js"></script>
+</body>
+</html>

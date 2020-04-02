@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Shibushibu Innovation</title>
+	<meta name="description" content="Shibushibu Innovation Projectとは、渋渋から伝達される情報を可能な限り電子化し、その情報をより正確に見やすく生徒に対して発信するプロジェクトです。各学年のホームページでは、先生から伝達されている情報や掲示板に貼り出された情報を、いつでもどこでも、見ることができる仕様となっております。">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:100,300,400,500,700,900&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/dd28f85337.js" crossorigin="anonymous"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<link href="css/style.css" rel="stylesheet">
+
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-auth.js"></script>  
+	<script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-database.js"></script>
+
+	<!-- TODO: Add SDKs for Firebase products that you want to use
+		https://firebase.google.com/docs/web/setup#available-libraries -->
+	<script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-analytics.js"></script>
+
+	<script>
+	// Your web app's Firebase configuration
+	var firebaseConfig = {
+		apiKey: "AIzaSyDRQf4Ar3RHEpINzSfVtUekoLn9Ng0RUs8",
+		authDomain: "shibushibu-innovation-fec82.firebaseapp.com",
+		databaseURL: "https://shibushibu-innovation-fec82.firebaseio.com",
+		projectId: "shibushibu-innovation-fec82",
+		storageBucket: "shibushibu-innovation-fec82.appspot.com",
+		messagingSenderId: "1094865112079",
+		appId: "1:1094865112079:web:919dfa3af4d8834563a77a",
+		measurementId: "G-HRMHDGFYN5"
+	};
+	// Initialize Firebase
+	firebase.initializeApp(firebaseConfig);
+	firebase.analytics();
+	</script>
+
+	<!-- favicon -->
+	<link rel="icon" href="img/favicon/favicon.ico" type="image/x-icon">
+
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png" sizes="180x180">
+
+	<link rel="icon" href="img/favicon/favicon-16x16.png" sizes="16x16">
+	<link rel="icon" href="img/favicon/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" href="img/favicon/android-chrome-192x192.png" sizes="48x48">
+	<link rel="icon" href="img/favicon/android-chrome-512x512.png" sizes="512x512">
+
+</head>
+<body onload="setAutoSignIn()">
+	<div class="headerDiv">
+		<a href="index.html">
+			<img src="img/headerTitle.png" class="headerTitle">
+		</a>
+		<p class="headerLang"><span style="margin-right: 30px;" onclick="setLanguage('En')" id="enText">EN</span><span onclick="setLanguage('Jp')" id="jpText">JP</span></p>
+	</div>
+	<div class="topMenuUl" onclick="Onscroll()">
+		<li class="topMenuLi" onclick="Onscroll()" id="topMenuLi0">コンセプト</li>
+		<li class="topMenuLi" onclick="Onscroll()" id="topMenuLi1">プロジェクト</li>
+		<li class="topMenuLi" onclick="Onscroll()" id="topMenuLi2">イベント</li>
+		<li class="topMenuLi" onclick="Onscroll()" id="topMenuLi3">カレンダー</li>
+		<li class="topMenuLi" onclick="Onscroll()" id="topMenuLi4">掲示板</li>
+	</div>
+	
+	<div class="mainView">
+		<img src="img/topPageBackground.jpeg" class="topImage">
+		<div class="mainViewDiv">
+			<img src="img/headerTitle.png" class="mainViewTitle">
+			<ul class="mainViewUl">
+				<li class="mainViewLi" onclick="signIn()"><p class="mainViewButton" id='signInButton'>ログイン</p></li>
+				<a href="sign-up.html"><li class="mainViewLi"><p class="mainViewButton" id='signUpButton'>新規登録</p></li></a>
+			</ul>
+			<p class="mainViewContent">Shibushibu Innovation Projectとは、学校から伝達される情報を可能な限り電子化し、その情報をより正確に見やすく生徒に対して発信するプロジェクトです。各学年のホームページでは、先生から伝達されている情報や掲示板に貼り出された情報を、いつでもどこでも、見ることができる仕様となっております。</p>
+			<p style="border-bottom: solid 1.5px #080a15;margin-top: 100px;"></p>
+			<input class="textbox usernameTextbox" type="text" placeholder="user ID" style="margin-top: 100px;"><br>
+			<input class="textbox pwTextbox" type="password" placeholder="password" style="margin-top: 50px;" oncopy="return false" onpaste="return false" oncontextmenu="return false"><br>
+			<p class="incollectUserText"><br><span id="incollectUserSpan">ユーザー情報が間違っています</span></p>
+			<p class="please_signIn_Text"><br><span id="please_signIn_Span">ログインしてください</span></p>
+			<div class="boxes">
+				<input type="checkbox" id="box-1">
+				<label for="box-1" id="box_label">次回以降、自動ログイン</label>
+			</div>
+			<a class="signInButton" onclick="cheackSignIn()">
+				〉ログイン
+			</a>
+			
+		</div>
+	</div>
+	<div style="width: 89.8vw; margin: 150px 5.1vw 0;text-align: right;">
+		<a href="">
+			<p class="administratorLoginText">Administrator Login / 管理者ログイン</p>
+		</a>
+	</div>
+	<div class="ContactView">
+		<p style="font-size: x-large;font-weight: 500;">E-mail</p>
+		<a href="mailto:shibushibu.innovation@gmail.com"  target="_blank" >
+			<p style="font-size: x-large;font-weight: 300;margin-top: 50px;">shibushibu.innovation@gmail.com</p>
+		</a>
+		
+		<p style="font-size: smaller;font-weight: 300;margin-top: 20px;border-bottom: 1.5px solid #080a15;">　</p>
+		<p style="font-size: x-large;font-weight: 500;margin-top: 80px;">Address</p>
+		<p style="font-size: x-large;font-weight: 300;margin-top: 50px;" class="adressText">〒150-0002　東京都渋谷区渋谷 1丁目 21-18</p>
+		<p style="font-size: smaller;font-weight: 300;margin-top: 20px;border-bottom: 1.5px solid #080a15;">　</p>
+		<p style="font-size: x-large;font-weight: 500;margin-top: 80px;" class="feedbackTitle">フィードバック</p>
+		<a href="https://forms.gle/JYmUptU11guEB4N4A" target="_blank"><p style="font-size: x-large;font-weight: 300;margin-top: 50px;">https://forms.gle/JYmUptU11guEB4N4A</p></a>	
+		<p style="font-size: smaller;font-weight: 300;margin-top: 20px;border-bottom: 1.5px solid #080a15;">　</p>
+		<p style="font-size: x-large;font-weight: 500;margin-top: 80px;" class="socialTitle">SNS</p>
+		<a href="https://www.instagram.com/shibuya_innovation/?hl=ja" target="_blank">
+			<i class="fab fa-instagram" style="font-size: 5vw;font-weight: 500;margin-top: 50px;"></i>
+		</a><br>
+		<a href="#" target="_blank">
+			<i class="fab fa-facebook-f" style="font-size: 5vw;font-weight: 500;margin-top: 50px;"></i>
+		</a><br>
+		<a href="#" target="_blank">
+			<i class="fab fa-twitter" style="font-size: 5vw;font-weight: 500;margin-top: 50px;"></i>
+		</a><br>
+		<div style="width: 100vw; margin: 200px 0 0;text-align: right;">
+			<p class="copyRight">©︎ 2020 RAY O.</p>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/sha256.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

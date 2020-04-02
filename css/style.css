@@ -1,0 +1,606 @@
+@import url(//use.fontawesome.com/releases/v5.0.11/css/all.css);
+body {
+    background: #f6f6f6;
+    margin: 0;
+    text-align: left;
+}
+a {
+    text-decoration: none;
+}
+p,li,a {
+    font-family: 'Noto Sans JP', sans-serif;
+    padding: 0;
+    margin: 0;
+    color: #080a15;
+}
+
+.headerDiv {
+    width: 100vw;
+    height: 100px;
+    margin-top: 60px;
+    position: relative;
+}
+
+.headerTitle{
+    position: absolute;
+    float: left;
+    left: 5.1vw;
+    bottom: -15%;
+    height: 60%;
+}
+.headerLang {
+    position: absolute;
+    float: right;
+    right: 5.1vw;
+    bottom: 0;
+    font-size: 28px;
+    font-weight: 300;
+}
+
+.langUnderline {
+    border-bottom: solid 1.5px #080a15;
+}
+#jpText {
+    text-decoration: underline;
+}
+.topMenuUl {
+    margin-left: 5.1vw;
+    margin-top: 125px;
+    padding: 0;
+}
+.topMenuLi {
+    display: inline-block;
+    list-style: none;
+    font-size: x-large;
+    margin-right: 1.5em;
+    letter-spacing: 0.08em;
+}
+.mainView {
+    width: 89.8vw;
+    height: calc(80.5vw + 500px);
+    overflow-y: hidden;
+    margin: 50px 5.1vw 0;
+    position: relative;
+
+}
+.mainView1 {
+    width: 89.8vw;
+    height: auto;
+    margin: 50px 5.1vw 0;
+    position: relative;
+}
+.conceptSection {
+    padding: 150px 5.1vw 0;
+    margin-top: 100px;
+}
+.conceptContent {
+    font-size: 32px;
+    font-weight: 400;
+    margin: 100px 0 0;
+    line-height: 2em;
+}
+.eventSection {
+    padding: 150px 5.1vw;
+    margin-top: 50px;
+    background: #f6f6f6;
+}
+.sectionTitle {
+    font-size: 6.5vw;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+}
+
+.sectionHr {
+    border: 1.5px solid #080a15;
+    margin-top: 30px;
+    width: 50%;
+    margin-right: 50%;
+}
+
+.eventTable {
+    width: 100%;
+    height: auto;
+    margin-top: 100px;
+}
+
+.eventCell {
+    width: calc(43.5vw - 4px);
+    height: auto;
+    background: white;
+    margin-bottom: 40px;
+    display: inline-block;
+    border: 1px solid transparent;
+    box-shadow: 13px 20px 0px #e4e4e4;
+}
+
+.eventCellImage {
+    width: calc(43.5vw - 6px);
+    height: 61.52vw;
+    margin: 0.75px;
+    object-fit: cover;
+}
+.eventCellTitle {
+    font-size: 3vw;
+    margin-left: 5.1%;
+    margin-top: 80px;
+    margin-bottom: 50px;
+    font-weight: 500;
+}
+
+.eventCellDate {
+    font-size: 2.6vw;
+    margin-left: 5.1%;
+    margin: 0 5.1% 30px;
+}
+
+.eventMOreDiv {
+    width: calc(43.5vw - 4px);
+    height: 10vw;
+    border: 1.5px solid #080a15;
+    margin-top: 50px;
+    box-shadow: 8px 15px 20px #e4e4e4, inset 8px 15px 20px #e4e4e4;
+    position: relative;
+}
+
+.eventMOreText {
+    font-size: 3.4vw;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    -webkit- transform: translateY(-50%) translateX(-50%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.signInViewAni {
+    animation: signInView 0.6s ease-in-out 0s forwards;
+}
+@keyframes signInView {
+    0% {height: calc(80.5vw + 500px);}
+    100% {height: calc(80.5vw + 1100px);}
+  }
+.topImage {
+    /* position: absolute;
+    top: 0;
+    left: 0; */
+    width: 89.8vw;
+    height: 80.50vw;
+    z-index: 0;
+}
+
+.mainViewDiv {
+    position: absolute;
+    left: 0;
+    top: 76.6vw;
+    width: 71.2vw;
+    margin: 0 4.65vw 0;
+    height: auto;
+    padding-left: 5.1%;
+    padding-right: 5.1%;
+    background: #f6f6f6;
+    z-index: 1;
+}
+
+.mainViewTitle {
+    width: 70%;
+    margin-top: 8%;
+}
+
+.mainViewUl {
+    padding: 0;
+    margin-top: 7%;
+}
+.mainViewLi {
+    list-style: none;
+    display: inline-block;
+    margin-right: 5%;
+    padding: 0;
+    width: 30%;
+    height: 5vw;
+    border: 1px solid #080a15;
+    position: relative;
+}
+
+.mainViewButton {
+    font-size: x-large;
+    font-weight: 300;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    -webkit- transform: translateY(-50%) translateX(-50%);
+}
+
+.mainViewContent {
+    font-size: x-large;
+    margin-top: 10%;
+    font-weight: 300;
+}
+
+.administratorLoginText {
+    font-size: large;
+    text-decoration: underline;
+    font-weight: 300;
+}
+
+.ContactView {
+    width: 100vw;
+    height: 1330px;
+    background: #e5e5e5;
+    margin: 20px 0 0;
+    padding-top: 80px;
+}
+.ContactView p,.ContactView i {
+    margin-left: 5.1vw;
+    margin-right: 5.1vw;
+}
+
+.ContactView i {
+    color: #696969;
+}
+
+.copyRight{
+    font-size: large;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+}
+
+.textbox{
+    padding-left: 3%;
+    border: 1px solid #080a15;
+    background: transparent;
+    width: 100%;
+    font-size: 1.3vh;
+    height: 2.5vh;
+    box-shadow: none;
+    border-radius: 0;
+}
+.textbox:focus{
+    border: 1.5px solid #080a15;
+    outline:none;
+    box-shadow:none;
+}
+
+.signInButton {
+    position: relative;
+    display: inline-block;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 400;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+    color: #080a15;
+    /* border: 1px solid #080a15; */
+    transition: .4s;
+    font-size: x-large;
+    margin-top: 30px;
+}
+
+
+.boxes {
+    width: 70vw;
+    margin: 30px 0 0;
+  }
+  
+  
+  
+  
+  
+  @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+  /*Checkboxes styles*/
+  input[type="checkbox"] { display: none; }
+  
+  input[type="checkbox"] + label {
+    display: block;
+    position: relative;
+    padding-left: 60px;
+    font-size: x-large;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 300;
+    color: #080a15;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+  }
+  
+  input[type="checkbox"] + label:last-child { margin-bottom: 0; }
+  
+  input[type="checkbox"] + label:before {
+    content: '';
+    display: block;
+    width: 26px;
+    height: 26px;
+    border: 1px solid #080a15;
+    position: absolute;
+    left: 0;
+    top: 5;
+    -webkit-transition: all .12s, border-color .08s;
+    transition: all .12s, border-color .08s;
+  }
+  
+  input[type="checkbox"]:checked + label:before {
+    width: 13px;
+    top: 0;
+    left: 5px;
+    border-radius: 0;
+    opacity: 1;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+
+
+
+
+  .siteImageDiv {
+    width: 100vw;
+    margin: 200px 0 0;
+  }
+ .siteImage1 {
+    width: 50vw;
+    height: 73vw;
+    float: left;
+    margin-top: 14vw;
+ }
+ .siteImage2 {
+    width: 50vw;
+    height: 73vw;
+    float: right;
+}
+
+.contentsSection{
+    padding: 100px 5.1vw 150px;
+    margin: calc(100px + 120vw) 0 0;
+    background: white;
+}
+
+.changeSiteImageDiv {
+    width: 12vw;
+    height: 12vw;
+    object-fit: cover;
+    border: solid 1px #080a15;
+    float: right;
+    margin: 2vw 1vw 0 calc(-1 * (1vw + 1px));
+    position: relative;
+}
+
+.changeSiteImageText {
+    font-size: 3vw;
+    font-weight: 300;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    -webkit- transform: translateY(-50%) translateX(-50%);
+}
+
+.contentsSectionImage {
+    margin-top: 100px;
+    width: 89.8vw;
+    height: 60vw;
+}
+
+.conceptSectionText {
+    margin: 50px 50% 0 0;
+    font-size: 25px;
+    font-weight: 300;
+    line-height: 2em;
+}
+
+.selectClasseDiv {
+    width: 100vw;
+    height: 40vw;
+    margin: 0;
+    background: #f1f1f1;
+    position: relative;
+}
+.selectDiv {
+    position: absolute;
+    width: 52vw;
+    height: 23.56vw;
+    background: white;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    -webkit- transform: translateY(-50%) translateX(-50%)
+}
+
+.selectClassText {
+    font-size: 4.5vw;
+    margin: 8% 0 0 5%;
+    font-weight: 300;
+}
+
+
+
+
+.labelDiv {
+    position: relative;
+    width: 95%;
+    height: 5vw;
+    margin: 5%;
+  }
+  
+  /* IE11 hide native button (thanks Matt!) */
+  select::-ms-expand {
+  display: none;
+  }
+  
+  .labelDiv:after {
+    content: '<>';
+    font: 17px "Consolas", monospace;
+    color: #333;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    left: 60%;
+    /*Adjust for position however you want*/
+    
+    top: 31%;
+    padding: 0 0 2px;
+    border-bottom: 1px solid #999;
+    /*left line */
+    
+    position: absolute;
+    pointer-events: none;
+  }
+  
+  .labelDiv select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* Add some styling */
+    
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    height: 50px;
+    /* float: right; */
+    margin: 5px 0px;
+    padding: 0px 24px;
+    font-size: 24px;
+    line-height: 1.75;
+    color: #333;
+    background-color: #ffffff;
+    background-image: none;
+    border: 1px solid #cccccc;
+    -ms-word-break: normal;
+    word-break: normal;
+  }
+  select:focus{
+    /* border:0; */
+    outline:none;
+    box-shadow:none;
+}
+
+.calendarDiv{
+    width: 100vw;
+    height: auto;
+    margin: 0;
+    background: white;
+    padding: 100px 0 100vw;
+}
+.timetableLeftDiv {
+    margin-left: 5.1vw;
+    margin-top: 100px;
+    float: left;
+    width: 40vw;
+    height: auto;
+    padding: 10% 0;
+}
+
+.timetableRigthDiv {
+    margin-top: 100px;
+    width: 50%;
+    height: auto;
+    padding: 10% 0 0;
+    float: right;
+    text-align: right;
+}
+
+.timetableTitle {
+    font-size: 4vw;
+    font-weight: 400;
+    /* text-decoration: underline; */
+}
+
+.timetableImg {
+    margin-top: 30px;
+    width: 40vw;
+    height: 56.5vw;
+    object-fit: contain;
+    background: #e5e5e5;
+}
+.timetableZoomDiv {
+    width: calc(43.5vw - 4px);
+    height: 10vw;
+    border: 1.5px solid #080a15;
+    margin: 55.5vw 0 0;
+    box-shadow: 8px 15px 20px #e4e4e4, inset 8px 15px 20px #e4e4e4;
+    position: relative;
+    /* float: right; */
+}
+
+.timetableZoomText {
+    font-size: 3.4vw;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    -webkit- transform: translateY(-50%) translateX(-50%);
+}
+
+.aboutUsDiv {
+    padding: 100px 5.1vw 300px;
+    margin: 100px 0 0;
+
+}
+.incollectUserText {
+    color: #F44336;
+    font-size: 2.5vw;
+    /* text-decoration: underline; */
+    margin: 1% 0;
+    display: none;
+}
+.please_signIn_Text{
+    color: #F44336;
+    font-size: 2.5vw;
+    /* text-decoration: underline; */
+    margin: 1% 0;
+    display: none;
+}
+
+.sign-up-errorText{
+    color: #F44336;
+    font-size: 2.5vw;
+    /* text-decoration: underline; */
+    margin: 1% 0;
+    display: none;
+    margin-top: 140px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* sign -up view */
+
+.sign-upTitle {
+    font-size: 30px;
+    font-weight: 300;
+    margin-top: 90px;
+    margin-bottom: 40px;
+}
+.sign-up-View {
+    width: 80vw;
+    margin: 110px 10vw 0;
+}
+.sign-up-topImage {
+    width: 103%;
+    margin-bottom: 130px;
+}

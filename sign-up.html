@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Shibushibu Innovation</title>
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:100,300,400,500,700,900&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/dd28f85337.js" crossorigin="anonymous"></script>
+	<link rel="icon" href="img/fabicon.ico">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<link href="css/style.css" rel="stylesheet">
+
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-auth.js"></script>  
+	<script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-database.js"></script>
+
+	<!-- TODO: Add SDKs for Firebase products that you want to use
+		https://firebase.google.com/docs/web/setup#available-libraries -->
+	<script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-analytics.js"></script>
+
+	<script>
+	// Your web app's Firebase configuration
+	var firebaseConfig = {
+		apiKey: "AIzaSyDRQf4Ar3RHEpINzSfVtUekoLn9Ng0RUs8",
+		authDomain: "shibushibu-innovation-fec82.firebaseapp.com",
+		databaseURL: "https://shibushibu-innovation-fec82.firebaseio.com",
+		projectId: "shibushibu-innovation-fec82",
+		storageBucket: "shibushibu-innovation-fec82.appspot.com",
+		messagingSenderId: "1094865112079",
+		appId: "1:1094865112079:web:919dfa3af4d8834563a77a",
+		measurementId: "G-HRMHDGFYN5"
+	};
+	// Initialize Firebase
+	firebase.initializeApp(firebaseConfig);
+	firebase.analytics();
+	</script>
+</head>
+<body>
+	<div class="headerDiv">
+		<a href="index.html">
+			<img src="img/headerTitle.png" class="headerTitle">
+		</a>
+		<p class="headerLang"><span style="margin-right: 30px;" onclick="setLanguage('En')" id="enText">EN</span><span onclick="setLanguage('Jp')" id="jpText">JP</span></p>
+	</div>
+	<div class="sign-up-View">
+			<img src="img/topPageBackground.jpeg" class="sign-up-topImage">
+			<p class="sign-upTitle" style="margin-top: 0;">ユーザーIDを作成</p>
+			<input class="textbox sign-upTextbox username_box" type="text" placeholder="英数字・記号のみで入力" pattern="^[0-9A-Za-z]+$">
+			<br>
+			<p class="sign-upTitle">パスワードを作成</p>
+			<input class="textbox sign-upTextbox pw_box" type="password" oncopy="return false" onpaste="return false" oncontextmenu="return false">
+			<br>
+			<p class="sign-upTitle">パスワードを再入力</p>
+			<input class="textbox sign-upTextbox pw_2_box" type="password" oncopy="return false" onpaste="return false" oncontextmenu="return false">
+			<br>
+			<p class="sign-upTitle">本名を入力</p>
+			<input class="textbox sign-upTextbox realname_box" type="text" placeholder="スペースなし・フルネームで入力">
+			<br>
+			<p class="sign-upTitle">表示名(ニックネーム)を入力</p>
+			<input class="textbox sign-upTextbox displayname_box" type="text">
+			<br>
+			<p class="sign-upTitle">何期生かを入力</p>
+			<input class="textbox sign-upTextbox grade_box" type="number" placeholder="数字のみで入力">
+			<br>
+			<p class="sign-upTitle">作成用パスワードを入力</p>
+			<input class="textbox sign-upTextbox create_pw_box" type="text">
+			<br>
+			<p class="sign-up-errorText"><br><span id="sign-up-errorSpan"></span></p><br>
+			<div class="mainViewLi" style="margin-top: 30px;" onclick="create_account()"><p class="mainViewButton" id='signUpButton'>新規作成</p></div>
+	</div>
+	<div style="width: 89.8vw; margin: 150px 5.1vw 0;text-align: right;">
+		<a href="#">
+			<p class="administratorLoginText">Administrator Login / 管理者ログイン</p>
+		</a>
+	</div>
+	<div class="ContactView">
+		<p style="font-size: x-large;font-weight: 500;">E-mail</p>
+		<a href="mailto:shibushibu.innovation@gmail.com"  target="_blank" >
+			<p style="font-size: x-large;font-weight: 300;margin-top: 50px;">shibushibu.innovation@gmail.com</p>
+		</a>
+		
+		<p style="font-size: smaller;font-weight: 300;margin-top: 20px;border-bottom: 1.5px solid #080a15;">　</p>
+		<p style="font-size: x-large;font-weight: 500;margin-top: 80px;">Address</p>
+		<p style="font-size: x-large;font-weight: 300;margin-top: 50px;" class="adressText">〒150-0002　東京都渋谷区渋谷 1丁目 21-18</p>
+		<p style="font-size: smaller;font-weight: 300;margin-top: 20px;border-bottom: 1.5px solid #080a15;">　</p>
+		<p style="font-size: x-large;font-weight: 500;margin-top: 80px;" class="feedbackTitle">フィードバック</p>
+		<a href="https://forms.gle/JYmUptU11guEB4N4A" target="_blank"><p style="font-size: x-large;font-weight: 300;margin-top: 50px;">https://forms.gle/JYmUptU11guEB4N4A</p></a>	
+		<p style="font-size: smaller;font-weight: 300;margin-top: 20px;border-bottom: 1.5px solid #080a15;">　</p>
+		<p style="font-size: x-large;font-weight: 500;margin-top: 80px;" class="socialTitle">SNS</p>
+		<a href="https://www.instagram.com/shibuya_innovation/?hl=ja" target="_blank">
+			<i class="fab fa-instagram" style="font-size: 5vw;font-weight: 500;margin-top: 50px;"></i>
+		</a><br>
+		<a href="#" target="_blank">
+			<i class="fab fa-facebook-f" style="font-size: 5vw;font-weight: 500;margin-top: 50px;"></i>
+		</a><br>
+		<a href="#" target="_blank">
+			<i class="fab fa-twitter" style="font-size: 5vw;font-weight: 500;margin-top: 50px;"></i>
+		</a><br>
+		<div style="width: 100vw; margin: 200px 0 0;text-align: right;">
+			<p class="copyRight">©︎ 2020 RAY O.</p>
+		</div>
+	</div>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/sha256.js"></script>
+<script type="text/javascript" src="js/sign-up.js"></script>
+
+</body>
+</html>
